@@ -1,0 +1,843 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #050505;
+    color: white;
+    font-family: Arial, sans-serif;
+
+    background-image:
+        radial-gradient(circle at 20% 20%, #7b00ff44, transparent 30%),
+        radial-gradient(circle at 80% 70%, #ff008844, transparent 30%);
+}
+
+
+/* HEADER */
+
+header {
+    height: 80px;
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #050505ee;
+
+    border-bottom: 1px solid #ffffff22;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 0 10px #00eaff,
+        0 0 20px #ff00aa;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #00eaff;
+
+    text-shadow: 0 0 10px #00eaff;
+}
+
+
+/* TÍTULO */
+
+.titulo {
+    padding: 90px 8% 60px;
+
+    border-bottom: 1px solid #ffffff22;
+}
+
+.titulo > p:first-child {
+    color: #00eaff;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+
+.titulo h1 {
+    margin: 20px 0;
+
+    font-size: 90px;
+    line-height: .85;
+
+    text-shadow:
+        0 0 10px #00eaff,
+        0 0 25px #7b00ff,
+        0 0 45px #ff0099;
+}
+
+.titulo h1 span {
+    color: #ff20b8;
+}
+
+.titulo > p:last-child {
+    color: #aaa;
+}
+
+
+/* LOCAL */
+
+.local {
+    padding: 80px 8%;
+
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.pequeno {
+    color: #00eaff;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.local-texto h2 {
+    margin: 20px 0;
+
+    font-size: 55px;
+    line-height: .9;
+
+    text-shadow:
+        0 0 10px #00eaff,
+        0 0 25px #7b00ff;
+}
+
+.local-texto > p:not(.pequeno) {
+    color: #aaa;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* GOOGLE MAPS */
+
+.maps {
+    display: inline-block;
+
+    padding: 14px 20px;
+
+    color: white;
+
+    text-decoration: none;
+
+    border: 1px solid #00eaff;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+.maps:hover {
+    background: #00eaff;
+
+    color: #050505;
+
+    box-shadow:
+        0 0 15px #00eaff,
+        0 0 30px #00eaff66;
+}
+
+
+/* MAPA */
+
+.mapa {
+    height: 500px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #07000d;
+
+    border: 1px solid #00eaff88;
+
+    box-shadow:
+        0 0 20px #00eaff33,
+        0 0 50px #7b00ff22;
+
+    border-radius: 5px;
+}
+
+
+/* GRADE DO MAPA */
+
+.mapa::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(#00eaff0c 1px, transparent 1px),
+        linear-gradient(90deg, #00eaff0c 1px, transparent 1px);
+
+    background-size: 30px 30px;
+}
+
+.mapa-titulo {
+    position: absolute;
+
+    top: 15px;
+    left: 20px;
+
+    color: #00eaff;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-shadow: 0 0 8px #00eaff;
+
+    z-index: 5;
+}
+
+
+/* RUAS */
+
+.rua {
+    position: absolute;
+
+    background: #ffffff18;
+}
+
+.rua1 {
+    width: 120%;
+    height: 4px;
+
+    top: 25%;
+    left: -10%;
+
+    transform: rotate(10deg);
+}
+
+.rua2 {
+    width: 120%;
+    height: 4px;
+
+    top: 70%;
+    left: -10%;
+
+    transform: rotate(-8deg);
+}
+
+.rua3 {
+    width: 4px;
+    height: 120%;
+
+    left: 30%;
+    top: -10%;
+
+    transform: rotate(12deg);
+}
+
+.rua4 {
+    width: 4px;
+    height: 120%;
+
+    left: 75%;
+    top: -10%;
+
+    transform: rotate(-12deg);
+}
+
+
+/* GALPÃO */
+
+.galpao {
+    position: absolute;
+
+    width: 48%;
+    height: 45%;
+
+    left: 26%;
+    top: 27%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: #120018;
+
+    border: 2px solid #ff20b8;
+
+    box-shadow:
+        0 0 20px #ff20b888,
+        inset 0 0 40px #7b00ff44;
+
+    transform: rotate(-2deg);
+
+    z-index: 2;
+}
+
+.galpao span {
+    color: #00eaff;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    text-shadow:
+        0 0 10px #00eaff,
+        0 0 25px #7b00ff;
+}
+
+
+/* PALCOS */
+
+.palco {
+    position: absolute;
+
+    padding: 10px;
+
+    background: #050505;
+
+    text-align: center;
+
+    font-size: 9px;
+    font-weight: bold;
+
+    z-index: 4;
+
+    transition: .3s;
+}
+
+.palco:hover {
+    transform: scale(1.1);
+}
+
+.palco1 {
+    top: 30%;
+    left: 28%;
+
+    color: #00eaff;
+
+    border: 1px solid #00eaff;
+
+    box-shadow: 0 0 12px #00eaff88;
+}
+
+.palco2 {
+    top: 30%;
+    right: 28%;
+
+    color: #ff20b8;
+
+    border: 1px solid #ff20b8;
+
+    box-shadow: 0 0 12px #ff20b888;
+}
+
+.palco3 {
+    bottom: 27%;
+    left: 43%;
+
+    color: #a66cff;
+
+    border: 1px solid #7b00ff;
+
+    box-shadow: 0 0 12px #7b00ff88;
+}
+
+
+/* PONTOS DO MAPA */
+
+.localizacao {
+    position: absolute;
+
+    padding: 7px 10px;
+
+    background: #050505ee;
+
+    border: 1px solid #ffffff44;
+
+    color: white;
+
+    font-size: 8px;
+    font-weight: bold;
+
+    z-index: 5;
+
+    transition: .3s;
+}
+
+.localizacao:hover {
+    transform: scale(1.1);
+
+    border-color: #00eaff;
+
+    box-shadow: 0 0 12px #00eaff66;
+}
+
+.entrada {
+    bottom: 8%;
+    left: 42%;
+
+    color: #00eaff;
+
+    border-color: #00eaff;
+}
+
+.banheiro {
+    top: 15%;
+    left: 8%;
+}
+
+.comida {
+    bottom: 15%;
+    right: 8%;
+
+    color: #ff20b8;
+
+    border-color: #ff20b8;
+}
+
+.seguranca {
+    top: 15%;
+    right: 8%;
+
+    color: #a66cff;
+
+    border-color: #7b00ff;
+}
+
+.estacionamento {
+    bottom: 8%;
+    left: 8%;
+}
+
+
+/* COMO CHEGAR */
+
+.chegar {
+    padding: 90px 8%;
+
+    border-top: 1px solid #ffffff22;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.5fr;
+
+    gap: 60px;
+}
+
+.chegar h2 {
+    margin-top: 20px;
+
+    font-size: 60px;
+
+    line-height: .85;
+
+    text-shadow:
+        0 0 10px #00eaff,
+        0 0 30px #7b00ff;
+}
+
+.chegar h2 span {
+    color: #ff20b8;
+}
+
+
+/* TRANSPORTES ANIMADOS */
+
+.transportes-animados {
+    height: 80px;
+
+    margin-top: 40px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-bottom: 2px solid #00eaff55;
+}
+
+.transporte-animado {
+    position: absolute;
+
+    left: -60px;
+    bottom: 10px;
+
+    font-size: 35px;
+
+    animation: andar 6s linear infinite;
+}
+
+
+/* METRÔ */
+
+.metro {
+    animation-delay: 0s;
+}
+
+
+/* CARRO */
+
+.carro {
+    animation-delay: 2s;
+}
+
+
+/* TÁXI */
+
+.taxi {
+    animation-delay: 4s;
+}
+
+
+/* LINHA */
+
+.linha-movimento {
+    position: absolute;
+
+    width: 100%;
+
+    bottom: 5px;
+
+    border-bottom: 2px dashed #ff20b8;
+}
+
+
+/* MOVIMENTO */
+
+@keyframes andar {
+
+    from {
+        left: -60px;
+    }
+
+    to {
+        left: 100%;
+    }
+
+}
+
+
+/* CARDS DE TRANSPORTE */
+
+.transportes {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.transporte {
+    padding: 25px;
+
+    border: 1px solid #ffffff22;
+
+    background: #ffffff05;
+
+    transition: .3s;
+}
+
+.transporte:hover {
+    border-color: #00eaff;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 0 15px #00eaff33;
+}
+
+.transporte h3 {
+    color: #ff20b8;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.transporte p {
+    color: #aaa;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+.transporte strong {
+    color: #00eaff;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+/* REGRAS */
+
+.regras {
+    padding: 80px 8%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+
+    border-top: 1px solid #ffffff22;
+}
+
+.pode,
+.nao-pode {
+    padding: 40px;
+
+    border: 1px solid #ffffff22;
+
+    background: #080808;
+}
+
+.pode {
+    border-color: #00eaff55;
+}
+
+.nao-pode {
+    border-color: #ff206655;
+}
+
+.pode h2,
+.nao-pode h2 {
+    margin: 15px 0 25px;
+
+    font-size: 55px;
+}
+
+.pode h2 {
+    color: #00eaff;
+
+    text-shadow: 0 0 15px #00eaff;
+}
+
+.nao-pode h2 {
+    color: #ff2066;
+
+    text-shadow: 0 0 15px #ff2066;
+}
+
+.regras ul {
+    list-style: none;
+
+    line-height: 2.4;
+
+    color: #ccc;
+}
+
+
+/* HORÁRIOS */
+
+.horarios {
+    padding: 90px 8%;
+
+    border-top: 1px solid #ffffff22;
+}
+
+.horarios h2 {
+    margin: 20px 0 50px;
+
+    font-size: 65px;
+
+    line-height: .85;
+
+    text-shadow:
+        0 0 10px #00eaff,
+        0 0 25px #7b00ff;
+}
+
+.horarios h2 span {
+    color: #ff20b8;
+}
+
+.horario {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid #ffffff22;
+}
+
+.horario > div {
+    padding: 25px;
+
+    border-right: 1px solid #ffffff22;
+}
+
+.horario strong {
+    color: #00eaff;
+
+    font-size: 30px;
+
+    text-shadow: 0 0 10px #00eaff;
+}
+
+.horario p {
+    margin-top: 10px;
+
+    color: #888;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 25px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    background: #020202;
+
+    border-top: 1px solid #ffffff22;
+
+    font-size: 11px;
+}
+
+footer p:last-child {
+    color: #00eaff;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 900px) {
+
+    header {
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .titulo {
+        padding: 60px 6% 40px;
+    }
+
+    .titulo h1 {
+        font-size: 60px;
+    }
+
+    .local {
+        grid-template-columns: 1fr;
+
+        padding: 60px 6%;
+    }
+
+    .local-texto h2 {
+        font-size: 45px;
+    }
+
+    .mapa {
+        height: 400px;
+    }
+
+    .chegar {
+        grid-template-columns: 1fr;
+
+        padding: 60px 6%;
+    }
+
+    .chegar h2 {
+        font-size: 50px;
+    }
+
+    .transportes {
+        grid-template-columns: 1fr;
+    }
+
+    .regras {
+        grid-template-columns: 1fr;
+
+        padding: 60px 6%;
+    }
+
+    .horarios {
+        padding: 60px 6%;
+    }
+
+    .horarios h2 {
+        font-size: 50px;
+    }
+
+    .horario {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .horario > div {
+        border-bottom: 1px solid #ffffff22;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+    }
+
+}
