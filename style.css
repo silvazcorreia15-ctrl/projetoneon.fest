@@ -1,5 +1,3 @@
-
-
 * {
     margin: 0;
     padding: 0;
@@ -55,9 +53,6 @@ body::before {
     }
 
 }
-
-
-/* camada escura */
 
 body::after {
     content: "";
@@ -539,9 +534,6 @@ nav a:hover::after {
         0 0 55px #7b00ff,
         0 0 90px #ff0099;
 }
-
-
-/* giro */
 
 @keyframes girar-cd {
 

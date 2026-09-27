@@ -1,0 +1,536 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:
+        radial-gradient(circle at 20% 20%, #7b00ff55, transparent 30%),
+        radial-gradient(circle at 80% 70%, #ff008855, transparent 30%),
+        #050505;
+
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+/* HEADER */
+
+header {
+    height: 80px;
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #050505ee;
+    border-bottom: 1px solid #ffffff22;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 0 10px #00eaff,
+        0 0 20px #ff00aa;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #00eaff;
+    text-shadow: 0 0 10px #00eaff;
+}
+
+
+/* TÍTULO */
+
+.titulo {
+    padding: 90px 8% 60px;
+
+    border-bottom: 1px solid #ffffff22;
+}
+
+.titulo > p:first-child {
+    color: #00eaff;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+
+.titulo h1 {
+    margin: 20px 0;
+
+    font-size: 90px;
+    line-height: .85;
+
+    text-shadow:
+        0 0 10px #00eaff,
+        0 0 25px #7b00ff,
+        0 0 45px #ff0099;
+}
+
+.titulo h1 span {
+    color: #ff20b8;
+}
+
+.titulo > p:last-child {
+    color: #aaa;
+}
+
+
+/* INGRESSOS */
+
+.ingressos {
+    padding: 70px 8%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* TICKET */
+
+.ticket {
+    position: relative;
+
+    padding: 30px;
+
+    min-height: 500px;
+
+    background: #090909;
+
+    border: 1px solid #00eaff55;
+
+    overflow: hidden;
+
+    transition: .4s;
+}
+
+
+/* EFEITO DE INGRESSO */
+
+.ticket::before,
+.ticket::after {
+    content: "";
+
+    position: absolute;
+
+    width: 25px;
+    height: 25px;
+
+    background: #050505;
+
+    border-radius: 50%;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+.ticket::before {
+    left: -14px;
+}
+
+.ticket::after {
+    right: -14px;
+}
+
+
+/* LINHA DO INGRESSO */
+
+.ticket::after {
+    box-shadow: 0 0 0 1px #00eaff55;
+}
+
+
+/* HOVER */
+
+.ticket:hover {
+    transform: translateY(-10px);
+
+    border-color: #00eaff;
+
+    box-shadow:
+        0 0 15px #00eaff66,
+        0 0 35px #7b00ff55;
+}
+
+
+/* TOPO */
+
+.ticket-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.ticket-top p {
+    color: #00eaff;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.numero {
+    color: #ff20b8;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* NOME */
+
+.ticket h2 {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 0 10px #ff20b8;
+}
+
+
+/* DESCRIÇÃO */
+
+.descricao {
+    color: #aaa;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    min-height: 70px;
+}
+
+
+/* PALCO */
+
+.local-ingresso {
+    margin: 25px 0;
+
+    padding: 15px;
+
+    border-left: 3px solid #00eaff;
+
+    background: #00eaff0d;
+}
+
+.local-ingresso p {
+    color: #888;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+}
+
+.local-ingresso strong {
+    color: #00eaff;
+
+    font-size: 14px;
+
+    text-shadow: 0 0 8px #00eaff;
+}
+
+
+/* LINHA */
+
+.linha {
+    border-top: 1px dashed #ffffff33;
+
+    margin: 20px 0;
+}
+
+
+/* BENEFÍCIOS */
+
+.beneficios {
+    line-height: 2;
+
+    font-size: 13px;
+
+    color: #ddd;
+}
+
+
+/* PREÇO */
+
+.preco {
+    margin-top: 25px;
+}
+
+.preco small {
+    display: block;
+
+    color: #888;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+.preco strong {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #00eaff;
+
+    font-size: 30px;
+
+    text-shadow: 0 0 10px #00eaff;
+}
+
+
+/* BOTÃO */
+
+.comprar {
+    display: block;
+
+    margin-top: 20px;
+
+    padding: 13px;
+
+    text-align: center;
+
+    color: white;
+
+    text-decoration: none;
+
+    border: 1px solid #ff20b8;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    transition: .3s;
+}
+
+.comprar:hover {
+    background: #ff20b8;
+
+    box-shadow:
+        0 0 15px #ff20b8,
+        0 0 30px #7b00ff;
+}
+
+
+/* VIP */
+
+.vip {
+    border-color: #ff20b855;
+}
+
+.vip h2 {
+    color: #ff20b8;
+
+    text-shadow:
+        0 0 10px #ff20b8;
+}
+
+.vip .local-ingresso {
+    border-color: #ff20b8;
+}
+
+.vip .local-ingresso strong {
+    color: #ff20b8;
+
+    text-shadow: 0 0 8px #ff20b8;
+}
+
+.vip .preco strong {
+    color: #ff20b8;
+
+    text-shadow: 0 0 10px #ff20b8;
+}
+
+
+/* OPEN BAR */
+
+.openbar {
+    border-color: #7b00ff88;
+}
+
+.openbar h2 {
+    color: #a66cff;
+
+    text-shadow:
+        0 0 10px #7b00ff;
+}
+
+.openbar .local-ingresso {
+    border-color: #a66cff;
+}
+
+.openbar .local-ingresso strong {
+    color: #a66cff;
+
+    text-shadow: 0 0 8px #7b00ff;
+}
+
+.openbar .preco strong {
+    color: #a66cff;
+
+    text-shadow: 0 0 10px #7b00ff;
+}
+
+
+/* AVISO */
+
+.aviso {
+    padding: 80px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 50px;
+
+    border-top: 1px solid #ffffff22;
+}
+
+.aviso h2 {
+    font-size: 60px;
+
+    line-height: .9;
+
+    text-shadow:
+        0 0 10px #00eaff,
+        0 0 30px #7b00ff;
+}
+
+.aviso h2 span {
+    color: #ff20b8;
+}
+
+.aviso p {
+    max-width: 400px;
+
+    color: #aaa;
+
+    line-height: 1.7;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 25px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    border-top: 1px solid #ffffff22;
+
+    background: #020202;
+
+    font-size: 11px;
+}
+
+footer p:last-child {
+    color: #00eaff;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 900px) {
+
+    header {
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .titulo {
+        padding: 60px 6% 40px;
+    }
+
+    .titulo h1 {
+        font-size: 60px;
+    }
+
+    .ingressos {
+        grid-template-columns: 1fr;
+
+        padding: 50px 6%;
+    }
+
+    .ticket {
+        min-height: auto;
+    }
+
+    .aviso {
+        padding: 60px 6%;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .aviso h2 {
+        font-size: 45px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+    }
+}
