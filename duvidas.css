@@ -15,8 +15,6 @@ body {
 }
 
 
-/* HEADER */
-
 header {
     height: 80px;
 
@@ -57,8 +55,9 @@ nav {
 }
 
 nav a {
-    color: #aaa;
+    position: relative;
 
+    color: #aaa;
     text-decoration: none;
 
     font-size: 12px;
@@ -67,14 +66,31 @@ nav a {
     transition: .3s;
 }
 
+nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: #ff20b8;
+    box-shadow: 0 0 10px #ff20b8;
+
+    transition: .3s;
+}
+
 nav a:hover {
     color: #00eaff;
-
     text-shadow: 0 0 10px #00eaff;
 }
 
+nav a:hover::after {
+    width: 100%;
+}
 
-/* HERO */
 
 .faq-hero {
     padding: 100px 8% 80px;
@@ -148,8 +164,6 @@ nav a:hover {
 }
 
 
-/* TERMINAL */
-
 .terminal {
     width: 350px;
 
@@ -182,8 +196,6 @@ nav a:hover {
     color: #00ff88;
 }
 
-
-/* PERGUNTAS */
 
 .perguntas {
     padding: 90px 8%;
@@ -279,8 +291,6 @@ details p {
 }
 
 
-/* CONTATO */
-
 .contato {
     padding: 90px 8%;
 
@@ -347,8 +357,6 @@ details p {
     box-shadow: 0 0 10px #00ff88;
 }
 
-
-/* FORMULÁRIO */
 
 form {
     padding: 30px;
@@ -438,8 +446,6 @@ button:hover {
 }
 
 
-/* EMERGÊNCIA */
-
 .emergencia {
     margin: 0 8% 80px;
 
@@ -524,8 +530,6 @@ button:hover {
 }
 
 
-/* FOOTER */
-
 footer {
     padding: 25px 8%;
 
@@ -544,8 +548,6 @@ footer p:last-child {
     color: #00eaff;
 }
 
-
-/* CELULAR */
 
 @media (max-width: 800px) {
 

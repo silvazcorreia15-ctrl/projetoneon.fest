@@ -54,6 +54,8 @@ nav {
 }
 
 nav a {
+    position: relative;
+
     color: #ddd;
     text-decoration: none;
 
@@ -63,9 +65,29 @@ nav a {
     transition: .3s;
 }
 
+nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: #ff20b8;
+    box-shadow: 0 0 10px #ff20b8;
+
+    transition: .3s;
+}
+
 nav a:hover {
     color: #00eaff;
     text-shadow: 0 0 10px #00eaff;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 .page-title {

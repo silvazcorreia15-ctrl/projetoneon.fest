@@ -15,8 +15,6 @@ body {
 }
 
 
-/* HEADER */
-
 header {
     height: 80px;
     padding: 0 7%;
@@ -52,6 +50,8 @@ nav {
 }
 
 nav a {
+    position: relative;
+
     color: #ddd;
     text-decoration: none;
 
@@ -61,13 +61,31 @@ nav a {
     transition: .3s;
 }
 
+nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: #ff20b8;
+    box-shadow: 0 0 10px #ff20b8;
+
+    transition: .3s;
+}
+
 nav a:hover {
     color: #00eaff;
     text-shadow: 0 0 10px #00eaff;
 }
 
+nav a:hover::after {
+    width: 100%;
+}
 
-/* TÍTULO */
 
 .titulo {
     padding: 90px 8% 60px;
@@ -105,8 +123,6 @@ nav a:hover {
 }
 
 
-/* INGRESSOS */
-
 .ingressos {
     padding: 70px 8%;
 
@@ -117,8 +133,6 @@ nav a:hover {
     gap: 25px;
 }
 
-
-/* TICKET */
 
 .ticket {
     position: relative;
@@ -136,8 +150,6 @@ nav a:hover {
     transition: .4s;
 }
 
-
-/* EFEITO DE INGRESSO */
 
 .ticket::before,
 .ticket::after {
@@ -166,14 +178,10 @@ nav a:hover {
 }
 
 
-/* LINHA DO INGRESSO */
-
 .ticket::after {
     box-shadow: 0 0 0 1px #00eaff55;
 }
 
-
-/* HOVER */
 
 .ticket:hover {
     transform: translateY(-10px);
@@ -185,8 +193,6 @@ nav a:hover {
         0 0 35px #7b00ff55;
 }
 
-
-/* TOPO */
 
 .ticket-top {
     display: flex;
@@ -214,8 +220,6 @@ nav a:hover {
 }
 
 
-/* NOME */
-
 .ticket h2 {
     font-size: 42px;
 
@@ -225,8 +229,6 @@ nav a:hover {
         0 0 10px #ff20b8;
 }
 
-
-/* DESCRIÇÃO */
 
 .descricao {
     color: #aaa;
@@ -238,8 +240,6 @@ nav a:hover {
     min-height: 70px;
 }
 
-
-/* PALCO */
 
 .local-ingresso {
     margin: 25px 0;
@@ -270,16 +270,12 @@ nav a:hover {
 }
 
 
-/* LINHA */
-
 .linha {
     border-top: 1px dashed #ffffff33;
 
     margin: 20px 0;
 }
 
-
-/* BENEFÍCIOS */
 
 .beneficios {
     line-height: 2;
@@ -289,8 +285,6 @@ nav a:hover {
     color: #ddd;
 }
 
-
-/* PREÇO */
 
 .preco {
     margin-top: 25px;
@@ -318,8 +312,6 @@ nav a:hover {
     text-shadow: 0 0 10px #00eaff;
 }
 
-
-/* BOTÃO */
 
 .comprar {
     display: block;
@@ -414,8 +406,6 @@ nav a:hover {
 }
 
 
-/* AVISO */
-
 .aviso {
     padding: 80px 8%;
 
@@ -453,8 +443,6 @@ nav a:hover {
 }
 
 
-/* FOOTER */
-
 footer {
     padding: 25px 8%;
 
@@ -474,7 +462,6 @@ footer p:last-child {
 }
 
 
-/* CELULAR */
 
 @media (max-width: 900px) {
 
